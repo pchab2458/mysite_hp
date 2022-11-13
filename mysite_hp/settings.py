@@ -57,7 +57,7 @@ ROOT_URLCONF = 'mysite_hp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'] # INDENTIFY PATH?
+        'DIRS': [BASE_DIR / 'templates']
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -124,7 +124,9 @@ USE_TZ = False # TO USE 'Asia/Bangkok TZ'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/' # IDENTIFY PATH?
+STATIC_URL = "static/"
+STATICFILES_DIRS = [BASE_DIR/"blog/static"]
+STATIC_ROOT = BASE_DIR/"staticfiles"
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # OK
 
